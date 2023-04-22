@@ -18,7 +18,7 @@ If you find this repository useful, please use the following citation:
 ```
 @inproceedings{venere2023onthedesign,
   title={On the Design and Characterization of Set Packing Problem on Quantum Annealers},
-  author={Venere, Marco and Giuseppe, Sorrentino and Branchini, Beatrice and Conficconi, Davide and Di Nitto, Elisabetta and Sciuto, Donatella and Santambrogio, Marco},
+  author={Venere, Marco and Sorrentino, Giuseppe and Branchini, Beatrice and Conficconi, Davide and Di Nitto, Elisabetta and Sciuto, Donatella and Santambrogio, Marco D},
   booktitle={IEEE EUROCON 2023 International Conference on Smart Technologies},
   year={2023}
 }
