@@ -1,0 +1,18 @@
+[{
+	"subsets": [
+		{"name": "1E8", "weight": 8}, 
+		{"name": "Z7MF"}, 
+		{"name": "F", "weight": 6}, 
+		{"name": "B", "weight": 6}, 
+		{"name": "1MS8", "weight": 5}, 
+		{"name": "ZI"}
+		], 
+	"constraints": [
+		{"sets": ["B", "ZI"]}, 
+		{"sets": ["1MS8", "ZI", "F"]}, 
+		{"sets": ["1E8", "B", "Z7MF", "F", "1MS8", "ZI"]}, 
+		{"sets": ["Z7MF", "1MS8", "ZI", "F"]}, 
+		{"sets": ["1E8", "B", "Z7MF", "F", "1MS8", "ZI"]}, 
+		{"sets": ["1E8", "B", "Z7MF", "F", "1MS8", "ZI"]}
+		]
+}]
