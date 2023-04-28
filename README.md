@@ -12,7 +12,31 @@ Differently, `JSONgenerator.py` contains the utility to generate random instance
 In folder `Datasets`, it is possible to observe examples of experiments run on D-Wave quantum annealers 2000Q and Advantage, in which, for each specific size of problem, the minimum and maximum energy of the solutions and the execution time is shown.
 Additionally, two example of input files, following our proposed format, are shown.
 
+### Usage example
+Following usage examples can be executed on D-Wave Leap IDE.
 
+Example of generation of a random instance of Set Packing Problem, for n = 20, and print of statistical data of output after execution on D-Wave Advantage.
+```
+from setpacking import SetPackingProblem, read_sanitized_file, print_qubits_info
+import JSONgenerator
+
+JSONgenerator.generate('Datasets/temp.json', 20)
+problem = read_sanitized_file('Datasets/temp.json')[0]
+sampleset = problem.prepare().sample_advantage(pre_factor = 2.0, num_of_reads = 100)
+print_qubits_info(sampleset)
+```
+Example of comparison on D-Wave 2000Q and Advantage, by running 10 different experiments, for several values of n, saved on files.
+```
+from setpacking import test_comp_and_adv
+
+test_comp_and_adv(comp_prefix = 'Datasets/2000Q/try_', \
+                    adv_prefix = 'Datasets/Advantage/try_', \
+                    num_files = 10)
+```
+Additional testing can be run by using:
+```
+python3 Code/testing.py
+```
 
 ### Creditors and Contributors
 Contributors:  Marco Venere, Giuseppe Sorrentino, Beatrice Branchini, Davide Conficconi, Elisabetta Di Nitto, Donatella Sciuto, Marco D. Santambrogio.
