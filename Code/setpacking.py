@@ -267,7 +267,7 @@ def print_qubits_info(sampleset):
 """
 #USAGE EXAMPLES:
 
-JSONGenerator.generate('Datasets/temp.json', 20)
+JSONgenerator.generate('Datasets/temp.json', 20)
 problem = read_sanitized_file('Datasets/temp.json')[0]
 sampleset = problem.prepare().sample_advantage(pre_factor = 2.0, num_of_reads = 100)
 print_qubits_info(sampleset)
@@ -281,7 +281,7 @@ test_comp_and_adv(comp_prefix = 'Datasets/Composite/try_', \
 
 
 for i in range(1, 160, 1):
-    JSONGenerator.generate('data.json', i)
+    JSONgenerator.generate('data.json', i)
     problem = read_sanitized_file('data.json')[0]
     if(i <= 65):
         with open('2000Q_test.txt', 'a') as q:
@@ -293,7 +293,7 @@ for i in range(1, 160, 1):
         a.write(f"{i}: {str(sampleset.info['timing'])}\n")
         a.close()
 
-#JSONGenerator.generate('Datasets/dataComposite.json',150 )
+#JSONgenerator.generate('Datasets/dataComposite.json',150 )
 
 problem = read_sanitized_file('Datasets/dataComposite.json')[0]
 sampleset = problem.prepare().sample_composite(True)
