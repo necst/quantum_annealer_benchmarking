@@ -17,7 +17,7 @@ for j in range(9,10):
     f_2000Q.write("numvar, minenergy, maxenergy, numqubit, maxchainlength, chainstrength, qpusamplingtime, qpuannealtimepersample, qpureadouttimepersample, qpuaccesstime, qpuaccessoverheadtime, qpuprogrammingtime, qpudelaytimepersample, totalpostprocessingtime, postprocessingoverheadtime\n")
     f_adv.write("numvar, minenergy, maxenergy, numqubit, maxchainlength, chainstrength, qpusamplingtime, qpuannealtimepersample, qpureadouttimepersample, qpuaccesstime, qpuaccessoverheadtime, qpuprogrammingtime, qpudelaytimepersample, totalpostprocessingtime, postprocessingoverheadtime\n")
     for i in range(1,61):
-        JSONGenerator.generate('Datasets/temp.json', i)
+        JSONgenerator.generate('Datasets/temp.json', i)
         problem = read_sanitized_file('Datasets/temp.json')[0]
         sampleset = problem.prepare()
         sampler_2000Q = EmbeddingComposite(DWaveSampler(solver={'topology__type': 'chimera'}))
@@ -67,7 +67,7 @@ for j in range(9,10):
 for j in range(0,10):
     f_adv = open("Datasets/Adv_new/try_%d.csv" % j, "a")
     for i in range(61,150):
-        JSONGenerator.generate('Datasets/temp.json', i)
+        JSONgenerator.generate('Datasets/temp.json', i)
         problem = read_sanitized_file('Datasets/temp.json')[0]
         sampleset = problem.prepare()
         sampler_adv = EmbeddingComposite(DWaveSampler())
@@ -95,7 +95,7 @@ for j in range(0,10):
     f_adv.close()
 """
 for i in range(2,151):
-    JSONGenerator.generate('Datasets/temp.json', i)
+    JSONgenerator.generate('Datasets/temp.json', i)
     problem = read_sanitized_file('Datasets/temp.json')[0]
     sampleset = problem.prepare()
     sampler = EmbeddingComposite(DWaveSampler())
